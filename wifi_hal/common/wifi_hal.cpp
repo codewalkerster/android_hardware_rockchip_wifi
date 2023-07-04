@@ -25,7 +25,7 @@
 #include <unistd.h>
 #include <log/log.h>
 
-#include <hardware_legacy/wifi_hal.h>
+#include "wifi_hal.h"
 
 extern "C" const char *get_wifi_hal_name(void);
 

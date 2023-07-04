@@ -39,10 +39,7 @@ LOCAL_C_INCLUDES += \
 	external/boringssl/src/crypto/digest \
 	external/boringssl/src/crypto/evp/
 
-LOCAL_HEADER_LIBRARIES := libutils_headers \
-			  liblog_headers \
-			  libnetlink_iface_headers \
-			  libhardware_legacy_headers
+LOCAL_HEADER_LIBRARIES := libutils_headers liblog_headers
 
 LOCAL_SRC_FILES := \
 	wifi_hal.cpp \
@@ -54,8 +51,7 @@ LOCAL_SRC_FILES := \
 	link_layer_stats.cpp \
 	wifi_logger.cpp \
 	wifi_offload.cpp \
-	twt.cpp \
-	scan.cpp
+	twt.cpp
 
 LOCAL_SHARED_LIBRARIES := \
 	librkwifi-ctrl \

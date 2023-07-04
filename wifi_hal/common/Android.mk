@@ -17,6 +17,21 @@ LOCAL_PATH := $(call my-dir)
 # Make the HAL library
 # ============================================================
 include $(CLEAR_VARS)
+
+LOCAL_C_INCLUDES += \
+    external/libnl/include \
+    $(call include-path-for, libhardware_legacy)/hardware_legacy \
+    external/wpa_supplicant_8/src/drivers
+
+LOCAL_HEADER_LIBRARIES := libutils_headers liblog_headers
+LOCAL_SRC_FILES := wifi_hal.cpp
+
+LOCAL_MODULE := libwifi-hal-auto
+LOCAL_PROPRIETARY_MODULE := true
+
+include $(BUILD_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := libwifi-hal-package
 LOCAL_MODULE_OWNER := google
 LOCAL_MODULE_TAGS := optional
