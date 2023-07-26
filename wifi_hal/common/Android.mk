@@ -39,5 +39,6 @@ LOCAL_REQUIRED_MODULES := \
     libwifi-hal-bcm \
     libwifi-hal-rtk \
     libwifi-hal-bes \
-    libwifi-hal-aic
+    libwifi-hal-aic \
+    libwifi-hal-qcom
 include $(BUILD_PHONY_PACKAGE)
