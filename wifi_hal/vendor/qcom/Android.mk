@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+ifeq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), car)
 LOCAL_PATH := hardware/qcom/wlan/qcwcn/wifi_hal
 
 # Control APIs used by clients to communicate with HAL.
@@ -185,3 +186,4 @@ endif
 
 LOCAL_HEADER_LIBRARIES := libcutils_headers libutils_headers libwifi-hal-ctrl_headers
 include $(BUILD_SHARED_LIBRARY)
+endif
