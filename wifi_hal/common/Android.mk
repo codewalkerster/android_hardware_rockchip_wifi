@@ -39,6 +39,8 @@ LOCAL_REQUIRED_MODULES := \
     libwifi-hal-bcm \
     libwifi-hal-rtk \
     libwifi-hal-bes \
-    libwifi-hal-aic \
-    libwifi-hal-qcom
+    libwifi-hal-aic
+ifeq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), car)
+LOCAL_REQUIRED_MODULES += libwifi-hal-qcom
+endif
 include $(BUILD_PHONY_PACKAGE)
